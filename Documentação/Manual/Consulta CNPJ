@@ -1,0 +1,26 @@
+Documentação para implementação
+
+	Utilizando a class funcoes para obter dados do CNPJ
+		Ordem dos campos a ser recuperado pelo Array
+			[0]'NÚMERO DE INSCRIÇÃO',
+			[1]'DATA DE ABERTURA',
+			[2]'NOME EMPRESARIAL',
+			[3]'TÍTULO DO ESTABELECIMENTO (NOME DE FANTASIA)',
+			[4]'CÓDIGO E DESCRIÇÃO DA ATIVIDADE ECONÔMICA PRINCIPAL',
+			[5]'CÓDIGO E DESCRIÇÃO DAS ATIVIDADES ECONÔMICAS SECUNDÁRIAS',
+			[6]'CÓDIGO E DESCRIÇÃO DA NATUREZA JURÍDICA',
+			[7]'LOGRADOURO',
+			[8]'NÚMERO',
+			[9]'COMPLEMENTO',
+			[10]'CEP',
+			[11]'BAIRRO/DISTRITO',
+			[12]'MUNICÍPIO',
+			[13]'UF',
+			[14]'ENDEREÇO ELETRÔNICO',
+			[15]'TELEFONE',
+			[16]'ENTE FEDERATIVO RESPONSÁVEL (EFR)',
+			[17]'SITUAÇÃO CADASTRAL',
+			[18]'DATA DA SITUAÇÃO CADASTRAL',
+			[19]'MOTIVO DE SITUAÇÃO CADASTRAL',
+			[20]'SITUAÇÃO ESPECIAL',
+			[21]'DATA DA SITUAÇÃO ESPECIAL'
