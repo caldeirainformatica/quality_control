@@ -29,17 +29,20 @@
         
             function verificaDuplicidade(){
 		$.ajax({
-                    url: "http://localhost/quality_control/model/verifica_duplicidade.php",
+                    url: "http://localhost/quality_control/control/verifica_duplicidade.php",
                     data: {
                         cnpj: $('#cnpj').val()
                     },
                     success: function(retorno) {
                     if(retorno == 'ok'){
-                       location.href = 'http://localhost/quality_control/model/erro.php?cnpj='+ $('#cnpj').val();
+                        if (isEmptyObject( $('#nome')) ){
+                            $('#nome') = 'ANÔNIMO';
+                        }
+                       location.href = 'http://localhost/quality_control/view/pesquisa.php?cnpj='+ $('#cnpj').val()+'&nome='+$('#nome');
                        
                        
                     }else{
-                      alert('1');
+                     location.href = 'http://localhost/quality_control/view/cadastro.php?cnpj='+ $('#cnpj').val()+'&nome='+$('#nome');
             
 			}
                     }
