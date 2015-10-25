@@ -1,7 +1,7 @@
 <?php
 
 // define caminho absoluto e relativo para arquivo cookie
-$pasta_cookies = 'cookies_cnpj/';
+$pasta_cookies = '../cookies/';
 define('COOKIELOCAL', str_replace('\\', '/', realpath('./')).'/'.$pasta_cookies);
 define('HTTPCOOKIELOCAL',$pasta_cookies);
 

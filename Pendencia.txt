@@ -1,0 +1,4 @@
+Estava colocando a função cadastrar para incluir no banco de dados as informações do formulario processa e redirecionar para a
+    pagina de pesquisa.
+
+Também tenho que incluir a classe de cancelamento, para caso o cliente deseje desistir do cadastro.

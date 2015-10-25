@@ -5,7 +5,7 @@
 		private $host		='localhost';
 		private $user		= 'root';
 		private $password	= 'root';
-		private $banco		= 'qualitycontrol';
+		private $banco		= 'quality_control';
 		
 		protected $conexao;
 		protected $resulado;
@@ -20,9 +20,15 @@
 			mysqli_close($this->conexao);
 		}
 		public function executar($sql){
-			$this->conectar();
+                    try {
+                        $this->conectar();
 			$this->resulado = mysqli_query($this->conexao, $sql);
 			$this->desconectar();
+                        return 'ok';
+                    } catch (Exception $e) {
+                        return ('Erro ao executar sql, conexao, 29'.$e->getMessage());
+                    }
+                    
 		}
 		public function recuperaSelect($sql){
 			$this->conectar();
