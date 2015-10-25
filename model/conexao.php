@@ -24,7 +24,7 @@
                         $this->conectar();
 			$this->resulado = mysqli_query($this->conexao, $sql);
 			$this->desconectar();
-                        return 'ok';
+                        return $this->resulado;
                     } catch (Exception $e) {
                         return ('Erro ao executar sql, conexao, 29'.$e->getMessage());
                     }

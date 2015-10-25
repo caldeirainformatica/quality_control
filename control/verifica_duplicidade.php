@@ -3,16 +3,15 @@
 
     $conecta = new Conexao();
     $cnpj = $_POST['cnpj'];
+    
 
-    $sql = "SELECT * FROM cliente WHERE cliente.cnpj = ".$cnpj;
+    $sql = ("SELECT cnpj FROM empresa WHERE empresa.cnpj = '$cnpj'");
    
     $result = $conecta->recuperaSelect($sql);
     if($result){
-	foreach ($result as $r){
-		echo ('ok');
-     }
+	echo true;
     }else{
-        echo 'erro';
+        echo false;
     }
   
        

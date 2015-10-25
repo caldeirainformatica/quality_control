@@ -160,7 +160,7 @@ function parseHtmlCNPJ($html)
 		{$resultado['status'] = 'Imagem digitada incorretamente';}
 	}
 	else
-	{$resultado['status'] = 'OK';}
+	{$resultado['status'] = 'ok';}
 	
 	return $resultado;
 

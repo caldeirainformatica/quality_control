@@ -89,7 +89,7 @@
             $conexao = new Conexao();
             
            $sql = ("insert into empresa (razao, fantasia, cnpj, endereco, numero, complemento, municipio, uf, bairro, telefone, email)
-                    values ($razao, $fantasia, $cnpj, $endereco, $numero, $complemento, $municipio, $uf, $bairro,$telefone, $email)");
+                    values ('$razao', '$fantasia', '$cnpj', '$endereco', '$numero', '$complemento', '$municipio', '$uf', '$bairro', '$telefone', '$email')");
             try {
                 $retorno = $conexao->executar($sql);
                 

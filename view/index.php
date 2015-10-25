@@ -33,18 +33,17 @@
                 }else{
                     $.ajax({
                         type: 'POST',
-                    url: "<?php $_SERVER['DOCUMENT_ROOT'].'/quality_control/control/verifica_duplicidade.php'?>",
+                    url: "http://localhost/quality_control/control/verifica_duplicidade.php",
                     data: {
                         cnpj: $('#cnpj').val()
                     },
                     success: function(retorno) {
-                    if(retorno == 'ok'){
+                    if(retorno == true){
                        $('#recebeDados').attr('action','pesquisa.php');
-                       
-                    }else{
+                     }else if(retorno == false){
                       $('#recebeDados').attr('action','cadastro.php');
-			}
                     }
+                }
 		});
                 }
             }
@@ -64,18 +63,14 @@
                             <br/> desde já agradecemos sua participação.</h4></div>
                     <div class="panel-body"> 
                         <fieldset>
-                            <legend><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/quality_control/img/logo.jpg" height="100px" width="375px" align='center'></legend><br/>
+                            <legend><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/quality_control/img/logo.jpg" height="140" align='center'></legend><br/>
 
                             <form name="recebeDados" id="recebeDados" action="#" method="post">
                                 <div class="col-md-8 col-sm-8">
                                     <label for="cnpj">Insira o cnpj da empresa em que representa<font color="red">*</font></label><br/>
-                                    <input type="number" name="cnpj" id="cnpj" required="true" placeholder="apenas números" class="form-control" onblur="verifica(); return false;" />
+                                    <input type="number" name="cnpj" id="cnpj" required autocomplete="off" placeholder="apenas números" class="form-control" onblur="verifica(); return false;" />
                                 </div>   
                                <br/>
-                                <div class="col-md-8">
-                                    <label for="nome">Insira o nome do avaliador</label><br/>
-                                    <input type="text" name="nome" id="nome" class="form-control"/><br/>
-                                </div>
                                 <div class="col-md-8">
                                     <font color='red'>Campos com * são obrigatórios</font>
                                 </div>

@@ -15,7 +15,7 @@
             $campos = parseHtmlCNPJ($getHtmlCNPJ);
         }
         //verifica a existencia dos dados no array
-        if ($campos['status'] != 'OK'){
+        if ($campos['status'] != 'ok'){
             echo '<div>';
             echo '<font color="red"><h4>'.$campos['status'].'***</h4></font>';
             include './cadastro.php';
@@ -29,6 +29,16 @@
         function cadastrar(){ 
             if( $('#situacaoCadastral').val() == 'ATIVA'){
                 $('#razao').removeAttr('disabled');
+                $('#fantasia').removeAttr('disabled');
+                $('#cnpj').removeAttr('disabled');
+                $('#endereco').removeAttr('disabled');
+                $('#numero').removeAttr('disabled');
+                $('#complemento').removeAttr('disabled');
+                $('#municipio').removeAttr('disabled');
+                $('#uf').removeAttr('disabled');
+                $('#bairro').removeAttr('disabled');
+                $('#telefone').removeAttr('disabled');
+                $('#email').removeAttr('disabled');
                 $('#grava').attr('action','../control/cadastro/cadastro.php');
                 $('#grava').submit();
             }else{

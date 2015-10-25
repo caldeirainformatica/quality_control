@@ -14,7 +14,7 @@
         <?php
         include_once $_SERVER['DOCUMENT_ROOT'].'/quality_control/model/head.php';
             $cnpj = $_POST['cnpj'];
-            $nome = $_POST['nome'];
+           
         ?>
         
         
@@ -42,13 +42,12 @@
                     <form name="consulta" action="processa.php" method="post">
                         <div class="col-md-8">
                             <label for="cnpj">CNPJ<font color="red">*</font></label><br/>
-                            <input type="number" name="cnpj" id="cnpj" required="required" placeholder="apenas números" class="form-control" value="<?php echo $cnpj; ?>" />
-                            <input type="hidden" name="nome" id="nome" value="<?php echo $nome; ?>">
+                            <input type="number" name="cnpj" id="cnpj" required="required" placeholder="apenas números" class="form-control" value="<?php echo $cnpj; ?>" >
                         </div>   
                        <br/>
                         <div class="col-md-8">
                             <img src= "<?php $_SERVER['DOCUMENT_ROOT']?>/quality_control/control/getcaptcha.php" border="0"><font color="red">*</font><br/>
-                            <input type="text" name="captcha" id="captcha" class="form-control" required="true" maxlength="6" placeholder="insira as letras a cima"/><br/>
+                            <input type="text" name="captcha" id="captcha" class="form-control" required="true" maxlength="6" placeholder="insira as letras a cima"><br/>
                         </div>
                         <div class="col-md-8">
                             <font color='red'>Campos com * são obrigatórios</font>
@@ -58,7 +57,9 @@
                        </div>
                     </form>
                 </fieldset>
-            </div> 
+                    </div> 
+              </div>
+            </div>
         </div>
     </body>
 </html>
