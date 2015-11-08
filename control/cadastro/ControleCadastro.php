@@ -83,12 +83,12 @@
         $this->telefone = $telefone;
         }
 
-        public function cadastrarEmpresa ($razao, $fantasia, $cnpj,$endereco, $numero, 
-                $complemento, $municipio, $uf, $bairro,$telefone, $email){
+        public function cadastrarCliente ($razao, $fantasia, $cnpj,$endereco, $numero, 
+                $complemento, $municipio, $uf, $bairro, $telefone, $email){
         
             $conexao = new Conexao();
             
-           $sql = ("insert into empresa (razao, fantasia, cnpj, endereco, numero, complemento, municipio, uf, bairro, telefone, email)
+           $sql = ("insert into cliente (razao, fantasia, cnpj, endereco, numero, complemento, municipio, uf, bairro, telefone, email)
                     values ('$razao', '$fantasia', '$cnpj', '$endereco', '$numero', '$complemento', '$municipio', '$uf', '$bairro', '$telefone', '$email')");
             try {
                 $retorno = $conexao->executar($sql);

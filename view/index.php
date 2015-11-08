@@ -38,10 +38,12 @@
                         cnpj: $('#cnpj').val()
                     },
                     success: function(retorno) {
-                    if(retorno == true){
-                       $('#recebeDados').attr('action','pesquisa.php');
-                     }else if(retorno == false){
-                      $('#recebeDados').attr('action','cadastro.php');
+                    if(retorno == 1){
+                        $('#recebeDados').attr('action','pesquisa.php?cnpj='+$cnpj.value);
+                        document.recebeDados.submit();
+                     }else if(retorno == 0){
+                        $('#recebeDados').attr('action','cadastro.php');
+                        document.recebeDados.submit();
                     }
                 }
 		});
@@ -60,7 +62,8 @@
                 <div class="panel panel-info">
                     <div class="panel-heading"><h4>Você foi selecionado para participar 
                             da pesquisa de qualidade. Sua opnião é de máxima improtancia
-                            <br/> desde já agradecemos sua participação.</h4></div>
+                            <br/> desde já agradecemos sua participação.</h4>
+                    </div>
                     <div class="panel-body"> 
                         <fieldset>
                             <legend><img src="<?php $_SERVER['DOCUMENT_ROOT']?>/quality_control/img/logo.jpg" height="140" align='center'></legend><br/>
@@ -68,14 +71,14 @@
                             <form name="recebeDados" id="recebeDados" action="#" method="post">
                                 <div class="col-md-8 col-sm-8">
                                     <label for="cnpj">Insira o cnpj da empresa em que representa<font color="red">*</font></label><br/>
-                                    <input type="number" name="cnpj" id="cnpj" required autocomplete="off" placeholder="apenas números" class="form-control" onblur="verifica(); return false;" />
+                                    <input type="number" name="cnpj" id="cnpj" required autocomplete="off" placeholder="apenas números" class="form-control" />
                                 </div>   
                                <br/>
                                 <div class="col-md-8">
                                     <font color='red'>Campos com * são obrigatórios</font>
                                 </div>
                                <div class="col-md-8">
-                                   <input type="submit" id="enviar" value="Enviar" class="btn-info">
+                                   <input type="submit" id="enviar" value="Enviar" class="btn-info" onclick="verifica(); return false;">
                                    <input type="reset" id="reset" value="Limpar" class="btn-default">
                                </div>
                             </form>

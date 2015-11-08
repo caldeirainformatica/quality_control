@@ -16,8 +16,8 @@
         }
         //verifica a existencia dos dados no array
         if ($campos['status'] != 'ok'){
-            echo '<div>';
-            echo '<font color="red"><h4>'.$campos['status'].'***</h4></font>';
+            echo '<div align="center">';
+            echo '<font color="red"><h1>'.$campos['status'].'***</h1></font>';
             include './cadastro.php';
             echo '</div>';
 	}else {

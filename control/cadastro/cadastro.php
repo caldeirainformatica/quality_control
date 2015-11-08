@@ -1,5 +1,6 @@
 <?php
     include_once 'ControleCadastro.php';
+    include_once './../../model/head.php';
     
     $razao          = $_POST['razao'];
     $fantasia       = $_POST['fantasia'];
@@ -16,15 +17,15 @@
     $cnpjSmascara = preg_replace("/\D+/", "", $cnpj);
     $control = new ControleCadastro();
     
-    $resultado = $control->cadastrarEmpresa($razao, $fantasia, $cnpjSmascara, $endereco, $numero, $complemento, $municipio, $uf, $bairro, $telefone, $email);
+    $resultado = $control->cadastrarCliente($razao, $fantasia, $cnpjSmascara, $endereco, $numero, $complemento, $municipio, $uf, $bairro, $telefone, $email);
     
     if ($resultado){
         ?>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Cadastro Empresa</title>
-    </head>
+<script type="text/javascript">
+    
+    window.location.href = '../../view/pesquisa.php?cnpj=<?php echo $cnpj?>';
+
+</script>
 <?php    }else{?>
     <script type="text/javascript">
     alert('Alguma coisa deu errado, informe a CPD SOLUÇÕES EM INFORMÁTICA o erro cadastrarOk');
@@ -32,9 +33,5 @@
     <?php
 }
 ?>
-    <body>
-        <form action="../../view/pesquisa.php" method="post" id="cadastroOk">
-        <input type="hidden" value="<?php echo $cnpjSmascara;?>">
-        </form>
-    </body>
+    
 </html>

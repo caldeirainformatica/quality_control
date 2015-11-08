@@ -5,13 +5,13 @@
     $cnpj = $_POST['cnpj'];
     
 
-    $sql = ("SELECT cnpj FROM empresa WHERE empresa.cnpj = '$cnpj'");
+    $sql = ("SELECT cnpj FROM cliente WHERE cliente.cnpj = '$cnpj'");
    
     $result = $conecta->recuperaSelect($sql);
     if($result){
-	echo true;
+	echo 1;
     }else{
-        echo false;
+        echo 0;
     }
   
        

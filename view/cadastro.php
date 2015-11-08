@@ -30,7 +30,7 @@
     -->
     <body>
         <div class="container" style="margin-top: 20px">
-            <div style="margin-top: 60px; margin-left: 300px; margin-right: 350px;">
+            <div style="margin-top: 20px; margin-left: 300px; margin-right: 350px;">
               <div class="panel panel-info">
                     <div class="panel-heading"> <h3>Sua empresa ainda não está cadastrada<br/>
                         por favor, confira o cnpj e digite as letras <br/>
