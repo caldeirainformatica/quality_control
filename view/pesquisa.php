@@ -46,7 +46,7 @@
                         <form action="../control/pesquisa/grava_pesquisa.php" method="post" name="pesquisa" id="pesquisa">
                             <div class="row">
                                 <div class="col-md-6 col-xs-4 col-sm-2">
-                                    <label for="nome">Informe seu nome do avaliador referente ao cnpj <input type="text" value="<?php echo $cnpj ?>" readonly/></label><br/>
+                                    <label for="nome">Informe seu nome do avaliador referente ao cnpj <input type="text" name="cnpj" id="cnpj" value="<?php echo $cnpj ?>" readonly/></label><br/>
                                     <input class="form-control" type="text" placeholder="Nomes em branco serão considerados anônimos" id="nome" name="nome"><br/>
                                 </div>
                                 <div class="col-md-6 col-xs-4 col-sm-2">

@@ -3,9 +3,9 @@
 	class Conexao {
 		
 		private $host		='localhost';
-		private $user		= 'root';
-		private $password	= 'root';
-		private $banco		= 'quality_control';
+		private $user		= 'ricardo';
+		private $password	= 'pauloepedro132';
+		private $banco		= 'cpdsico_quality_control';
 		
 		protected $conexao;
 		protected $resulado;
