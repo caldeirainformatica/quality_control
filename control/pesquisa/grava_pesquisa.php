@@ -1,4 +1,9 @@
-<?php
+ <html>
+     <head>
+         <meta charset="utf-8">
+        <title>FINALIZA CADASTRO</title>
+         
+         <?php
     include_once 'ControleGravaPesquisa.php';
     
     $nome       = $_POST['nome'];
@@ -15,10 +20,24 @@
     $grava = new ControleGravaPesquisa();
     
     $resultado = $grava->gravaPesquisa($nome, $setor, $online, $presencial, $financeiro, $comercial, $suprema, $preventiva, $qualidade, $cnpj);
-    
-    echo '<pre>';
-    print_r($resultado);
-    
-    echo '<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>';
-    
-    var_dump($resultado);
+   
+    if ($resultado = 1){
+    ?>
+        <script type="text/javascript">
+            alert('Pesquisa gravada com sucesso, você será direcionado a pagina inicial');
+            window.location.href = '../../../../quality_control/view/';
+        
+        </script>
+            
+    <?php }  else {
+        ?>
+       <script type="text/javascript">
+            alert('Erro ao grava pesquisa, comunique a CPD SOLUÇÕES EM INFORMÁTICA');
+            window.location.href = 'localhost/quality_control/view/';
+        
+        </script>
+        
+<?php
+} ?>
+    </head>
+ </html>
